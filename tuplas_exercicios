@@ -1,0 +1,41 @@
+!--exercicio 01--!
+
+numeros = ('zero', 'um', 'dois', 'tres', 'quatro', 'cinco',
+'seis', 'sete', 'oito', 'nove', 'dez',
+'onze', 'doze', 'treze', 'catorze', 'quinze',
+'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
+
+while True:
+    num = int(input('Digite um número entre 0 e 20: '))
+    if 0 <= num <= 20:
+        break
+    else:
+        print('O número digitado nã está no intervalo de 0 e 20')
+        continue
+print(f'Você digitou o número {numeros[num]}')
+
+!--exercicio 02--!
+
+numeros = (int(input('Digite um valor: ')), 
+int(input('Digite outro valor: ')), 
+int(input('Digite mais um valor: ')),
+int(input('Digite o último valor: ')))
+print(f'Os valores digitados foram: {sorted(numeros)}')
+
+print(f'O número 9 apareceu: {numeros.count(9)} vez(s)')
+if 3 in numeros:
+    print(f'O número 3 apareceu na posição: {numeros.index(3)}')
+else:
+    print('O número 3 não foi digitado')
+for c in numeros:
+    if c % 2 == 0:
+
+!--exercicio 03--!
+
+palavras = ('Conhecedor', 'Aura', 'Calistenia', 'Python')
+for palavra in palavras:
+    print(f'\n Na palavra {palavra} temos: ', end='')
+    for letras in palavra:
+        if letras.lower() in 'aeiou':
+            print(letras, end =' ')
+        print(f'Os valores pares foram: {c}')
