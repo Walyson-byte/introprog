@@ -1,0 +1,56 @@
+!----exercicios 01----!
+
+notas = []
+
+for c in range(1,9):
+    notas.append(float(input('Fale sua nota: ')))
+print(f'As notas foram estas: {notas}')
+print(f'A maior nota foi: {(max(notas))}')
+print(f'A menor nota foi: {(min(notas))}')
+media = sum(notas) / len(notas)
+print(f'A sua média ficou: {media}')
+
+mudanca = input('Você deseja trocar alguma nota [s/n]: ')
+if mudanca == "s":
+    remocao = notas.pop(int(input('Qual indice vc deseja excluir: ')))
+    adicionar = notas.append(float(input('Qual nota deseja adicionar: ')))
+    print(notas)
+else:
+    print(notas)
+
+!----exercicios 02----!
+
+x = (float(input('Me fale a coordenada X: ')))
+y = (float(input('Me fale a coordenada y: ')))
+pos_inicial = (x, y)
+
+#desempacotar
+x, y = pos_inicial
+
+if x > 0 and y > 0:
+    print('1 quadrante')
+elif x < 0 and y > 0:
+    print('2 quadrante')
+elif x < 0 and y < 0:
+    print('3 quadrante')
+elif x > 0 and y < 0:
+    print('4 quadrante')
+else:
+    print('Origem')
+
+
+!----exercicio 03----!
+
+lista = []
+
+while True:
+    desejo = input('Deseja adcionar algum participante[s/n]: ')
+    if desejo == "s":
+        lista.append(input('Nome do participante: '))
+    else:
+        print('Fechei a lista')
+        break
+print(set(lista))
+print(f'A quantidade de inscritos foi: {len(lista)}')
+print(f'A quantidade de inscritos diferentes foi: {len(set(lista))}')
+print(f'Em ordem alfabética fica: {sorted(set(lista))}')
