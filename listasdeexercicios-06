@@ -54,3 +54,59 @@ print(set(lista))
 print(f'A quantidade de inscritos foi: {len(lista)}')
 print(f'A quantidade de inscritos diferentes foi: {len(set(lista))}')
 print(f'Em ordem alfabética fica: {sorted(set(lista))}')
+
+
+!----exercicio 04----!
+
+musicas = []
+
+for c in range(1,6):
+    musicas.append(input('Fale uma música: '))
+print(f'As músicas escolhidas foram: {musicas}')
+
+while True:
+    adicionar = input('Deseja adicionar alguma música [s/n]? ')
+    if adicionar == 's':
+        musicas.append(input('Adicione uma música: '))
+        print(f'As músicas são: {musicas}')
+    else:
+        break
+print('-=' * 30)
+while True:
+    retirar = input('Deseja remover alguma música [s/n]? ')
+    if retirar == "s":
+        musicas.pop(musicas.index(input('Qual música deseja excluir: ')))
+    else:
+        break
+print(f'As músicas da sua playlist são: {musicas}')
+
+
+!----exercicio 06----!
+
+grupo1 = set()
+grupo2 = set()
+
+while True:
+    adicionar = input('Deseja adicionar alguém para o grupo 1 [s/n]? ')
+    if adicionar == 's':
+        grupo1.add(input('Nome do participante: '))
+    else:
+        break
+print(f'Os participantes do grupo 1 são: {grupo1}')
+
+while True:
+    adicionar2 = input('Deseja adicionar alguém para o grupo 2 [s/n]? ')
+    if adicionar2 == 's':
+        grupo2.add(input('Nome do participante: '))
+    else:
+        break
+print(f'Os participantes do grupo 2 são: {grupo2}')
+
+print('-=' * 30)
+print(f'O grupo 1 ficou assim: {grupo1}')
+print(f'O grupo 2 ficou assim: {grupo2}')
+print('-=' * 30)
+
+print(f'Participam dos dois grupos: {grupo1 & grupo2}')
+print(f'Participam de pelo menos um dos grupos: {grupo1 ^ grupo2}')
+print(f'Participam de somente um dos dois clubes grupos: {grupo1 - grupo2}')
